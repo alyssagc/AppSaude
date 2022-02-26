@@ -1,8 +1,8 @@
 class PlanosController < ApplicationController
   def index
-    @planos - Plano.all
+    #@planos = Plano.all
   end
   def show
-    @plano = Plano.find(params[:id])
+    #@plano = Plano.find(params[:id])
   end
 end
