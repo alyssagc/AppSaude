@@ -1,8 +1,17 @@
-<h1>Benefícios Cadastrados atualmente</h1>
- <div class='d-flex justify-content-center'>
-    <% current_user.planos.each do |plano| %>
-      <h1><%= link_to plano.nome, plano_funcionarios_path(plano), class: "btn" %></h1>
-    <%end%>
+<div class='d-flex justify-content-center container-home'>
+  <div class="card p-5 justify-content-between ">
+    <div class='text-center'>
+      <h1> <%= current_user.nickname%> </h1>
+      <h5> Meus Benefícios contratados: </h5>
+    </div>
+    <div class='planos-container'>
+      <% current_user.planos.each do |plano| %>
+       <h4><%= link_to plano.nome, plano_funcionarios_path(plano), class: "planos-name text-decoration-none" %></h4>
+      <%end%>
+    </div>
+    <div class='d-flex justify-content-around btn-planos'>
+      <h5><%= link_to 'Back', root_path, class: "btn-home" %></h5>
+      <h5><%= link_to 'Adicionar novo benefício', '', class: "btn-home " %></h5>
+    </div>
+  </div>
 </div>
-<h1><%= link_to 'Back', root_path, class: "btn" %></h1>
-<h1>Se der tempo criar new update e destroy dos Benefícios</h1>
