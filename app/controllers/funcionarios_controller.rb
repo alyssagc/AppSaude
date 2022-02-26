@@ -1,4 +1,5 @@
 class FuncionariosController < ApplicationController
+  before_action :authenticate_user!
   before_action :find_funcionario, only: %i[edit update show destroy]
 
   def index
