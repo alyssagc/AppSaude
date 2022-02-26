@@ -1,28 +1,77 @@
-<div class='cointainer'>
-    <div class='flex-row'>
-      <div class='d-flex justify-content-center'>
-        <h1> Bem vindo ao portal da Pipo Saúde </h1>
+<div class='container-home' align='center'>
+    <div class='text-center py-5'>
+      <h1>Bem-vindo(a) ao portal da Pipo Saúde!</h1>
+    </div>
+    <div class="card p-5">
+      <div class='row'>
+        <div class='pl-5 text-center'>
+          <h3>Faça seu login para entrar na plataforma!</h3>
+        </div>
       </div>
-      <div class='d-flex justify-content-center'>
-        <p> Faça seu login para entrar na plataforma!</p>
-      </div>
-      <div class="container d-flex flex-column ">
-        <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-          <div class="form-inputs">
-            <%= f.input :email,
-                        required: false,
-                        autofocus: true,
-                        input_html: { autocomplete: "email" } %>
-            <%= f.input :password,
-                        required: false,
-                        input_html: { autocomplete: "current-password" } %>
-            <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+          <div class='row mt-3 justify-content-center'>
+            <div class="text-left">
+              <%= f.label :email %>
+              <%= f.email_field :email, autofocus: true, autocomplete: 'email', class: 'form-control' %>
+            </div>
           </div>
-          <div class="form-actions">
-            <%= f.button :submit, "Log in" %>
+
+          <div class='row justify-content-center'>
+            <div class="form-group text-left mt-3">
+              <%= f.label :password %>
+              <%= f.password_field :password, autocomplete: 'current-password', class: 'form-control' %>
+            </div>
+          </div>
+
+          <div class='row justify-content-center'>
+            <% if devise_mapping.rememberable? %>
+              <div class="form-group col-4 form-check">
+                <%= f.check_box :remember_me, class: 'form-check-input' %>
+                <%= f.label :remember_me, class: 'form-check-label' do %>
+                  <%= resource.class.human_attribute_name('remember_me') %>
+                <% end %>
+              </div>
+            <% end %>
+          </div>
+
+          <div class='row mt-4'>
+            <p class='col-4'></p>
+            <div class="form-group col-4">
+              <%= f.button :submit, class: 'form-control btn-home' %>
+            </div>
           </div>
         <% end %>
-        <%= render "devise/shared/links" %>
+        <div class='row mt-2 flex-column justify-content-center'>
+          <p><%= render 'devise/shared/links' %></p>
+        </div>
       </div>
-    </div>
 </div>
+
+
+
+
+<%# <div class='d-flex flex-column container-home'>
+  <div class="p-5 title">
+    <h1> Bem vindo ao portal da Pipo Saúde! </h1>
+  </div>
+    <div class="card p-5 shadow login-container d-flex flex-column">
+      <h4 class="text-center"> Faça seu login para entrar na plataforma!</h4>
+      <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+        <%# <div class="d-flex flex-column form-inputs"> %>
+          <%# <%= f.input :email,
+                      required: false,
+                      autofocus: true,
+                      input_html: { autocomplete: "email" } %>
+                      <%# <div class="mb-3"></div> %>
+          <%# <%= f.input :password, %>
+                      <%# required: false,
+                      input_html: { autocomplete: "current-password" } %>
+                      <%# <div class="mb-2"></div> %>
+          <%# <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+        <%# </div> %>
+        <%# <div class="form-actions justify-content-center">
+          <%= f.button :submit, "Log in" %>
+        <%# </div> %>
+      <%# <% end %>
+    <%# </div> %>
+<%# </div> %>
