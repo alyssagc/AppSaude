@@ -1,4 +1,4 @@
 class Funcionario < ApplicationRecord
   belongs_to :user
-  belongs_to :empresas
+  has_many :planos
 end

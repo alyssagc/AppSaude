@@ -6,8 +6,21 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-User.create!(email: 'alyssagcmaster@hotmail.com', password: '123456')
-funcionario = Funcionario.create(name: 'José', cpf: 12345, peso: 65, altura: 1.73, horas_meditadas: 5, data_admissao: '15-02-2020', email: 'teste@teste.com', endereco: 'rua dois 189' )
-funcionario = Funcionario.create(name: 'José', cpf: 12345, peso: 65, altura: 1.73, horas_meditadas: 5, data_admissao: '15-02-2020', email: 'teste@teste.com', endereco: 'rua dois 189' )
-funcionario = Funcionario.create(name: 'José', cpf: 12345, peso: 65, altura: 1.73, horas_meditadas: 5, data_admissao: '15-02-2020', email: 'teste@teste.com', endereco: 'rua dois 189' )
-funcionario = Funcionario.create(name: 'José', cpf: 12345, peso: 65, altura: 1.73, horas_meditadas: 5, data_admissao: '15-02-2020', email: 'teste@teste.com', endereco: 'rua dois 189' )
+#ClienteAcme
+acme = User.create(email: 'acme@hotmail.com', password: '123456', nickname: 'Acme Co.')
+plano1 = Plano.create(nome: 'Plano de Saúde NorteEuropa', user: acme)
+plano = Plano.create(nome: 'Plano Dental Sorriso', user: acme)
+Funcionario.create(name: 'José', cpf: 12345, peso: 65, altura: 1.73, horas_meditadas: 5, data_admissao: '15-02-2020', email: 'teste@teste.com', endereco: 'rua dois 189', user: acme)
+Funcionario.create(name: 'José', cpf: 12345, peso: 65, altura: 1.73, horas_meditadas: 5, data_admissao: '15-02-2020', email: 'teste@teste.com', endereco: 'rua dois 189', user: acme)
+Funcionario.create(name: 'José', cpf: 12345, peso: 65, altura: 1.73, horas_meditadas: 5, data_admissao: '15-02-2020', email: 'teste@teste.com', endereco: 'rua dois 189', user: acme)
+Funcionario.create(name: 'José', cpf: 12345, peso: 65, altura: 1.73, horas_meditadas: 5, data_admissao: '15-02-2020', email: 'teste@teste.com', endereco: 'rua dois 189', user: acme)
+
+#ClientePatinhaBank
+tiopatinhasbank = User.create(email: 'tiopatinhasbank@hotmail.com', password: '123456', nickname: 'Tio Patinhas Bank')
+plano = Plano.create(nome: 'Plano de Saúde Pampulha Intermédica', user: tiopatinhasbank)
+plano = Plano.create(nome: 'Plano Dental Sorriso', user: tiopatinhasbank)
+plano = Plano.create(nome: 'Plano de Saúde Mente Sã, Corpo São', user: tiopatinhasbank)
+funcionario = Funcionario.create(name: 'Maria', cpf: 54321, peso: 65, altura: 1.73, horas_meditadas: 5, data_admissao: '15-02-2020', email: 'teste@teste.com', endereco: 'rua dois 189', user: tiopatinhasbank )
+funcionario = Funcionario.create(name: 'Maria', cpf: 54321, peso: 65, altura: 1.73, horas_meditadas: 5, data_admissao: '15-02-2020', email: 'teste@teste.com', endereco: 'rua dois 189', user: tiopatinhasbank )
+funcionario = Funcionario.create(name: 'Maria', cpf: 54321, peso: 65, altura: 1.73, horas_meditadas: 5, data_admissao: '15-02-2020', email: 'teste@teste.com', endereco: 'rua dois 189', user: tiopatinhasbank )
+funcionario = Funcionario.create(name: 'Maria', cpf: 54321, peso: 65, altura: 1.73, horas_meditadas: 5, data_admissao: '15-02-2020', email: 'teste@teste.com', endereco: 'rua dois 189', user: tiopatinhasbank )
