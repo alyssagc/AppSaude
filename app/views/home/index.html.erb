@@ -1,14 +1,14 @@
-<div class='d-flex justify-content-center container-home'>
-  <div class="card p-5 ">
-    <div class='text-center'>
+<div class='d-flex flex-column container-home'>
+    <div class='text-center p-5'>
       <h1> Olá, <%= current_user.nickname%> </h1>
     </div>
+  <div class="card p-5 ">
     <div class='text-center'>
-      <h5> O que deseja acessar hoje: </h5>
+      <h3> O que deseja acessar hoje: </h3>
     </div>
     <div class= 'd-flex justify-content-around' id= 'btn-home-container'>
-       <h1><%= link_to 'Benefícios', planos_path, class: "btn-home text-decoration-none" %></h1>
-       <h1><%= link_to 'Funcionários', funcionarios_path, class: "btn-home text-decoration-none" %></h1>
+       <h3><%= link_to 'Benefícios', planos_path, class: "btn-home text-decoration-none" %></h3>
+       <h3><%= link_to 'Funcionários', funcionarios_path, class: "btn-home text-decoration-none" %></h3>
     </div>
   </div>
 </div>
