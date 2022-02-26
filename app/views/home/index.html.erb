@@ -1,15 +1,14 @@
-<div class='cointainer'>
-  <div class='flex-row'>
-    <div class='d-flex justify-content-center'>
+<div class='d-flex justify-content-center container-home'>
+  <div class="card p-5 ">
+    <div class='text-center'>
       <h1> Olá, <%= current_user.nickname%> </h1>
     </div>
-    <div class='d-flex justify-content-center'>
-      <p> Acesse abaixo todos seus planos cadastrados na empresa!</p>
+    <div class='text-center'>
+      <h5> O que deseja acessar hoje: </h5>
     </div>
-    <div class='d-flex justify-content-center'>
-      <% current_user.planos.each do |plano| %>
-        <h1><%= link_to plano.nome, plano_funcionarios_path(plano), class: "btn" %></h1>
-      <%end%>
+    <div class= 'd-flex justify-content-around' id= 'btn-home-container'>
+       <h1><%= link_to 'Benefícios', planos_path, class: "btn-home text-decoration-none" %></h1>
+       <h1><%= link_to 'Funcionários', funcionarios_path, class: "btn-home text-decoration-none" %></h1>
     </div>
   </div>
 </div>

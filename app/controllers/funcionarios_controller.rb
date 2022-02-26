@@ -14,7 +14,7 @@ class FuncionariosController < ApplicationController
 
   def create
     @funcionario = Funcionario.new(funcionario_params)
-    #@funcionario.user = current_user
+    @funcionario.user = current_user
     if @funcionario.save
       redirect_to funcionario_path(@funcionario), notice: "Funcionário adicionado com sucesso!"
     else

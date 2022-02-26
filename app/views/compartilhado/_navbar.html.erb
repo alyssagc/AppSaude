@@ -1,14 +1,15 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Pipo Saúde</a>
-  </div>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-    <div class="d-flex justify-content-end navbar-nav">
-      <% if user_signed_in? %>
-        <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-link" %>
-      <% else %>
-        <%= link_to "Login", new_user_session_path, class: "nav-link" %>
-      <% end %>
-    </div>
+<nav class="navbar bg-light">
+      <div>
+        <%= link_to root_path, class: "navbar-brand d-flex" do %>
+          <%= image_tag "https://global-uploads.webflow.com/5ee0d13e1d0466f2353dcb99/604b853988008d3835ce3dc5_Logo%20%E2%80%93%20Pipo%20Sau%CC%81de.svg"%>
+        <% end %>
+      </div>
+
+      <div class="nav-link text-reset">
+        <% if user_signed_in? %>
+          <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "text-muted" %>
+        <% else %>
+          <%= link_to "Login", new_user_session_path, class: "text-muted" %>
+        <% end %>
+      </div>
 </nav>

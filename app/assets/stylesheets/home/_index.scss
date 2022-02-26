@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Poppins:wght@500&family=Raleway:wght@200&display=swap');
+
+.container-home{
+  align-items: center;
+  height: 100vh;
+  background-color: #ffd9e9;
+}
+
+.card{
+  background-color: #1139b0;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  width: 40vw;
+  height: 55vh;
+  border-radius:15px;
+
+}
+
+.btn-home{
+  padding: 0.3rem;
+  color: #1a2190;
+  border-radius: 5px;
+  background-color: #ffd9e9;
+    &:hover {
+      background-color: #1139b0;
+    }
+}
+
+#btn-home-container{
+  margin-top: 5rem;
+}

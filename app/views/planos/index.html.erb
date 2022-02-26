@@ -1,1 +1,8 @@
-<h1>INDEX</h1>
+<h1>Benefícios Cadastrados atualmente</h1>
+ <div class='d-flex justify-content-center'>
+    <% current_user.planos.each do |plano| %>
+      <h1><%= link_to plano.nome, plano_funcionarios_path(plano), class: "btn" %></h1>
+    <%end%>
+</div>
+<h1><%= link_to 'Back', root_path, class: "btn" %></h1>
+<h1>Se der tempo criar new update e destroy dos Benefícios</h1>
