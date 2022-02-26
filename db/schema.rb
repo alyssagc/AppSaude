@@ -10,13 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_02_25_223841) do
-
-  create_table "empresas", force: :cascade do |t|
-    t.string "name"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
+ActiveRecord::Schema.define(version: 2022_02_26_033433) do
 
   create_table "funcionarios", force: :cascade do |t|
     t.string "name"
@@ -29,6 +23,20 @@ ActiveRecord::Schema.define(version: 2022_02_25_223841) do
     t.text "endereco"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "user_id"
+    t.integer "planos_id"
+    t.index ["planos_id"], name: "index_funcionarios_on_planos_id"
+    t.index ["user_id"], name: "index_funcionarios_on_user_id"
+  end
+
+  create_table "planos", force: :cascade do |t|
+    t.string "nome"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.integer "funcionarios_id"
+    t.integer "user_id"
+    t.index ["funcionarios_id"], name: "index_planos_on_funcionarios_id"
+    t.index ["user_id"], name: "index_planos_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -39,8 +47,19 @@ ActiveRecord::Schema.define(version: 2022_02_25_223841) do
     t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "nickname"
+    t.integer "funcionarios_id"
+    t.integer "planos_id"
     t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["funcionarios_id"], name: "index_users_on_funcionarios_id"
+    t.index ["planos_id"], name: "index_users_on_planos_id"
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "funcionarios", "planos", column: "planos_id"
+  add_foreign_key "funcionarios", "users"
+  add_foreign_key "planos", "funcionarios", column: "funcionarios_id"
+  add_foreign_key "planos", "users"
+  add_foreign_key "users", "funcionarios", column: "funcionarios_id"
+  add_foreign_key "users", "planos", column: "planos_id"
 end
