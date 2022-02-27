@@ -1,5 +1,5 @@
-<div class= "text-center">
-  <h1> Funcionários </h1>
+<div class= "text-center container-home">
+  <h1 class= "p-5"> Funcionários </h1>
 
   <div class= "d-flex p-5 text-center">
     <table class="table table-bordered">
@@ -8,12 +8,8 @@
           <th scope="col">ID</th>
           <th scope="col">Nome</th>
           <th scope="col">CPF</th>
-          <th scope="col">Peso</th>
-          <th scope="col">Altura</th>
-          <th scope="col">Data de Admissão</th>
-          <th scope="col">Horas Meditadas</th>
           <th scope="col">Email</th>
-          <th scope="col">Endereço</th>
+          <th scope="col">Benefícios</th>
         </tr>
       </thead>
       <tbody>
@@ -22,19 +18,15 @@
               <th scope="row"><%= funcionario.id%></th>
               <td><%=  funcionario.name %></td>
               <td><%=  funcionario.cpf %></td>
-              <td><%=  funcionario.peso %></td>
-              <td><%= funcionario.altura %></td>
-              <td><%= funcionario.data_admissao %></td>
-              <td><%= funcionario.horas_meditadas %></td>
               <td><%= funcionario.email %></td>
-              <td><%= funcionario.endereco %></td>
+              <td><%=  %></td>
             </tr>
           <%end%>
       </tbody>
     </table>
   </div>
   <div class= "p-3">
-    <%= link_to 'New', new_funcionario_path , class: 'btn btn-secondary' %>
-    <%= link_to 'Go Back', :back, class: 'btn btn-secondary' %>
+    <%= link_to 'New', new_funcionario_path , class: 'btn-home' %>
+    <%= link_to 'Go Back', :back, class: 'btn-home' %>
   </div>
 </div>

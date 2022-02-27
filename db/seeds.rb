@@ -8,7 +8,7 @@
 
 #ClienteAcme
 acme = User.create(email: 'acme@hotmail.com', password: '123456', nickname: 'Acme Co.')
-plano1 = Plano.create(nome: 'Plano de Saúde NorteEuropa', user: acme)
+plano = Plano.create(nome: 'Plano de Saúde NorteEuropa', user: acme)
 plano = Plano.create(nome: 'Plano Dental Sorriso', user: acme)
 Funcionario.create(name: 'José', cpf: 12345, peso: 65, altura: 1.73, horas_meditadas: 5, data_admissao: '15-02-2020', email: 'teste@teste.com', endereco: 'rua dois 189', user: acme)
 Funcionario.create(name: 'José', cpf: 12345, peso: 65, altura: 1.73, horas_meditadas: 5, data_admissao: '15-02-2020', email: 'teste@teste.com', endereco: 'rua dois 189', user: acme)
@@ -20,7 +20,7 @@ tiopatinhasbank = User.create(email: 'tiopatinhasbank@hotmail.com', password: '1
 plano = Plano.create(nome: 'Plano de Saúde Pampulha Intermédica', user: tiopatinhasbank)
 plano = Plano.create(nome: 'Plano Dental Sorriso', user: tiopatinhasbank)
 plano = Plano.create(nome: 'Plano de Saúde Mente Sã, Corpo São', user: tiopatinhasbank)
-funcionario = Funcionario.create(name: 'Maria', cpf: 54321, peso: 65, altura: 1.73, horas_meditadas: 5, data_admissao: '15-02-2020', email: 'teste@teste.com', endereco: 'rua dois 189', user: tiopatinhasbank )
-funcionario = Funcionario.create(name: 'Maria', cpf: 54321, peso: 65, altura: 1.73, horas_meditadas: 5, data_admissao: '15-02-2020', email: 'teste@teste.com', endereco: 'rua dois 189', user: tiopatinhasbank )
-funcionario = Funcionario.create(name: 'Maria', cpf: 54321, peso: 65, altura: 1.73, horas_meditadas: 5, data_admissao: '15-02-2020', email: 'teste@teste.com', endereco: 'rua dois 189', user: tiopatinhasbank )
-funcionario = Funcionario.create(name: 'Maria', cpf: 54321, peso: 65, altura: 1.73, horas_meditadas: 5, data_admissao: '15-02-2020', email: 'teste@teste.com', endereco: 'rua dois 189', user: tiopatinhasbank )
+Funcionario.create(name: 'Maria', cpf: 54321, peso: 65, altura: 1.73, horas_meditadas: 5, data_admissao: '15-02-2020', email: 'teste@teste.com', endereco: 'rua dois 189', user: tiopatinhasbank)
+Funcionario.create(name: 'Maria', cpf: 54321, peso: 65, altura: 1.73, horas_meditadas: 5, data_admissao: '15-02-2020', email: 'teste@teste.com', endereco: 'rua dois 189', user: tiopatinhasbank)
+Funcionario.create(name: 'Maria', cpf: 54321, peso: 65, altura: 1.73, horas_meditadas: 5, data_admissao: '15-02-2020', email: 'teste@teste.com', endereco: 'rua dois 189', user: tiopatinhasbank)
+Funcionario.create(name: 'Maria', cpf: 54321, peso: 65, altura: 1.73, horas_meditadas: 5, data_admissao: '15-02-2020', email: 'teste@teste.com', endereco: 'rua dois 189', user: tiopatinhasbank)
