@@ -1,23 +1,28 @@
-<div class='d-flex flex-column align-items-center'>
+<div class='row justify-content-center'>
   <%= simple_form_for [ @funcionario ] do |f| %>
     <%= f.error_notification %>
     <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
-
-    <div class="form-inputs">
-      <%= f.input :name %>
-      <%= f.input :cpf %>
-      <%= f.input :peso, value: "Kg" %>
-      <%= f.input :altura %>
-      <%= f.input :data_admissao %>
-      <%= f.input :horas_meditadas %>
-      <%= f.input :email %>
-      <%= f.input :endereco %>
-      <%= f.input :planos.name %>
-
-    </div>
-    <div class='d-flex justify-content-center' >
-      <%= link_to "Back", funcionarios_path, class: "btn btn-secondary" %>
-      <%= f.submit class: "btn btn-secondary mx-3" %>
-    </div>
+      <div class='row mt-2 justify-content-center'>
+        <div class="text-left">
+          <%= f.label :name %>
+          <%= f.email_field :name, autofocus: true, autocomplete: 'nome', class: 'form-control' %>
+        </div>
+      </div>
+      <div class='row mt-2 justify-content-center'>
+        <div class="text-left">
+          <%= f.label :cpf %>
+          <%= f.email_field :cpf, autofocus: true, autocomplete: 'cpf', class: 'form-control' %>
+        </div>
+      </div>
+      <div class='row mt-2 justify-content-center'>
+        <div class="text-left">
+          <%= f.label :email %>
+          <%= f.email_field :email, autofocus: true, autocomplete: 'email', class: 'form-control' %>
+        </div>
+      </div>
+      <div class='d-flex justify-content-center mt-5' >
+        <%= link_to "Back", funcionarios_path, class: "btn btn-home" %>
+        <%= f.submit class: "btn btn-home mx-3" %>
+      </div>
   <% end %>
 </div>

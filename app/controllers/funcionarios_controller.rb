@@ -3,7 +3,7 @@ class FuncionariosController < ApplicationController
   before_action :find_funcionario, only: %i[edit update show destroy]
 
   def index
-    @funcionarios = Funcionario.where(user: current_user)
+    @funcionarios = Funcionario.all.where(user: current_user)
   end
 
   def show;end
