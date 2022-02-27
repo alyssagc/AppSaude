@@ -1,4 +1,9 @@
-<div class = 'container d-flex flex-column align-items-center bg-dark text-white'>
-  <h1 class='p-5 text-center'>Atualize os dados de um Funcionário</h1>
-  <%= render 'form', funcionario: @funcionario %>
+<div class = 'container-home' align='center'>
+  <div class='text-center py-5'>
+      <h1>Atualize cadastro de <%=@funcionario.name%></h1>
+  </div>
+  <div class="card p-5 ">
+    <h1 class='text-center'>Ficha: </h1>
+    <%= render 'form', funcionario: @funcionario %>
+  </div>
 </div>
