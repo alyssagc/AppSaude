@@ -1,0 +1,15 @@
+.thead{
+  color: #ff75af;
+}
+.table{
+  background-color: #f5cadc;
+}
+.btn-func{
+  padding: 0.6rem;
+  color: #ffd9e9;
+  border-radius: 5px;
+  background-color: #ff75af;
+    &:hover {
+      background-color: #1139b0;
+    }
+}

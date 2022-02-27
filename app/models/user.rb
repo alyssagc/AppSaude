@@ -1,8 +1,7 @@
 class User < ApplicationRecord
-  has_many :funcionarios
-  has_many :planos
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+  has_many :funcionarios, dependent: :destroy
+  has_many :planos, dependent: :destroy
+
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 end
