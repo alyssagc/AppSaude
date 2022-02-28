@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_02_26_033433) do
+ActiveRecord::Schema.define(version: 2022_02_28_023328) do
 
   create_table "funcionarios", force: :cascade do |t|
     t.string "name"
@@ -25,6 +25,9 @@ ActiveRecord::Schema.define(version: 2022_02_26_033433) do
     t.datetime "updated_at", precision: 6, null: false
     t.integer "user_id"
     t.integer "planos_id"
+    t.string "saude_fisica"
+    t.string "saude_dental"
+    t.string "saude_mental"
     t.index ["planos_id"], name: "index_funcionarios_on_planos_id"
     t.index ["user_id"], name: "index_funcionarios_on_user_id"
   end
