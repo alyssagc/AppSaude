@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root to: "home#index"
 
   resources :funcionarios
-  resources :planos, only: %i[index show] do
+  resources :planos do
     resources :funcionarios
   end
 end
