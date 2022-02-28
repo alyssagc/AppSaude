@@ -5,6 +5,11 @@ class PlanosController < ApplicationController
 
   def show
     @plano = Plano.find(params[:id])
-    @funcionarios = Funcionario.where(saude_fisica: @plano.nome)
+    @funcionarios = Funcionario.where(user: current_user)
+    #@AdesaoPlano = AdesaoPlano.where(planos: @plano)
+  end
+
+  def new
+    @plano = Plano.new
   end
 end

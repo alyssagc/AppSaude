@@ -10,23 +10,29 @@
           <th scope="col">CPF</th>
           <th scope="col">Email</th>
           <th scope="col">Benefícios</th>
+          <th scope="col">Empresa</th>
         </tr>
       </thead>
       <tbody>
           <% @funcionarios.each do |funcionario| %>
             <tr>
               <th scope="row"><%= funcionario.id%></th>
-              <td><%=  funcionario.name %></td>
-              <td><%=  funcionario.cpf %></td>
+              <td><%= funcionario.name %></td>
+              <td><%= funcionario.cpf %></td>
               <td><%= funcionario.email %></td>
               <td>
-                <%= funcionario.saude_fisica %>,
-                <%= funcionario.saude_dental %>,
-                <%= funcionario.saude_mental %>
+                <% funcionario.planos.each do |plano|%>
+                  <p><%= plano.nome %></p>
+                <%end%>
               </td>
-              <td><%= link_to 'Ver detalhes',funcionario_path(funcionario) , class: 'btn-home' %></td>
+              <td><%= funcionario.user.nickname %></td>
+              <td>
+                <%= link_to 'Edit', edit_funcionario_path(funcionario) , class: 'btn btn-home' %>
+                <%= link_to 'Delete', funcionarios_path, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger mx-3"%>
+              </td>
             </tr>
           <%end%>
+
       </tbody>
     </table>
   </div>
