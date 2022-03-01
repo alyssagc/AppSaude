@@ -44,6 +44,15 @@ ActiveRecord::Schema.define(version: 2022_03_01_150547) do
     t.index ["user_id"], name: "index_funcionarios_on_user_id"
   end
 
+  create_table "funcionarios_planos", id: false, force: :cascade do |t|
+    t.integer "funcionario_id", null: false
+    t.integer "plano_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index "\"planos_id\"", name: "index_funcionarios_planos_on_planos_id"
+    t.index ["funcionario_id"], name: "index_funcionarios_planos_on_funcionario_id"
+  end
+
   create_table "planos", force: :cascade do |t|
     t.string "nome"
     t.datetime "created_at", precision: 6, null: false
