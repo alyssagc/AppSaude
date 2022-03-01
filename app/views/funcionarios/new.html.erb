@@ -4,6 +4,12 @@
   </div>
   <div class="card p-5 ">
     <h1 class='text-center'>Ficha: </h1>
-        <%= render 'form', funcionario: @funcionario %>
+        <% if current_user.nickname == 'Tio Patinhas Bank'%>
+          <%= render 'formtiopat', funcionario: @funcionario %>
+        <% elsif current_user.nickname == 'Acme Co.'%>
+          <%= render 'formacme', funcionario: @funcionario %>
+        <% else %>
+          <%= render 'form', funcionario: @funcionario %>
+        <%end%>
   </div>
 </div>
