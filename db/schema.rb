@@ -54,7 +54,7 @@ ActiveRecord::Schema.define(version: 2022_03_01_150547) do
   end
 
   create_table "planos", force: :cascade do |t|
-    t.string "nome"
+    t.string "nome" 
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "user_id"

@@ -35,6 +35,8 @@
       <div class='row mt-5 justify-content-center'>
         <div class="text-left">
           <%= f.hidden_field :user, value: current_user %>
+          <%= f.hidden_field :endereco, value: 'vazio' %>
+          <%= f.hidden_field :horas_meditadas, value: 'vazio' %>
         </div>
       </div>
       <div class='d-flex justify-content-center mt-5' >
