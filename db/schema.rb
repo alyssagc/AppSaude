@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_02_28_184104) do
+ActiveRecord::Schema.define(version: 2022_03_01_150547) do
 
   create_table "adesao_planos", force: :cascade do |t|
     t.date "data_admissao"
@@ -35,6 +35,11 @@ ActiveRecord::Schema.define(version: 2022_02_28_184104) do
     t.datetime "updated_at", precision: 6, null: false
     t.integer "user_id"
     t.integer "adesao_planos_id"
+    t.decimal "peso"
+    t.decimal "altura"
+    t.text "endereco"
+    t.integer "horas_meditadas"
+    t.date "data_admissao"
     t.index ["adesao_planos_id"], name: "index_funcionarios_on_adesao_planos_id"
     t.index ["user_id"], name: "index_funcionarios_on_user_id"
   end
