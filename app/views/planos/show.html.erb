@@ -1,32 +1,98 @@
 <div class= "text-center container-home">
     <h1 class= "p-5"> Funcionários beneficiados na <%= @plano.nome %>:</h1>
-    <%# <%if @plano.nome == 'Dental Sorriso'%>
+    <%if @plano.nome == 'Dental Sorriso'%>
       <div class= "d-flex p-5 text-center">
         <table class="table">
           <thead class="thead">
             <tr>
-              <th scope="col">ID</th>
               <th scope="col">Nome</th>
               <th scope="col">CPF</th>
-              <th scope="col">Empresa</th>
+              <th scope="col">Peso (Kg)</th>
+              <th scope="col">Altura (cm)</th>
             </tr>
           </thead>
           <tbody>
-              <%# <% @AdesaoPlano.each do |funcionario| %>
               <% @funcionarios.each do |funcionario| %>
                 <tr>
-                  <th scope="row"><%= funcionario.id%></th>
                   <td><%=  funcionario.name %></td>
                   <td><%=  funcionario.cpf %></td>
-                  <td><%= funcionario.user.nickname %></td>
+                  <td><%= funcionario.peso %></td>
+                  <td><%= funcionario.altura %></td>
                 </tr>
               <%end%>
           </tbody>
         </table>
       </div>
-    <%# <%end%>
+    <%end%>
+    <%if @plano.nome == 'Pampulha Intermédica'%>
+      <div class= "d-flex p-5 text-center">
+        <table class="table">
+          <thead class="thead">
+            <tr>
+              <th scope="col">Nome</th>
+              <th scope="col">CPF</th>
+              <th scope="col">Data Admissão</th>
+              <th scope="col">Endereço</th>
+            </tr>
+          </thead>
+          <tbody>
+              <% @funcionarios.each do |funcionario| %>
+                <tr>
+                  <td><%=  funcionario.name %></td>
+                  <td><%=  funcionario.cpf %></td>
+                  <td><%= funcionario.data_admissao %></td>
+                  <td><%= funcionario.endereco %></td>
+                </tr>
+              <%end%>
+          </tbody>
+        </table>
+      </div>
+    <%end%>
+    <%if @plano.nome == 'Norte Europa'%>
+      <div class= "d-flex p-5 text-center">
+        <table class="table">
+          <thead class="thead">
+            <tr>
+              <th scope="col">Nome</th>
+              <th scope="col">CPF</th>
+              <th scope="col">Data Admissão</th>
+              <th scope="col">Email</th>
+            </tr>
+          </thead>
+          <tbody>
+              <% @funcionarios.each do |funcionario| %>
+                <tr>
+                  <td><%=  funcionario.name %></td>
+                  <td><%=  funcionario.cpf %></td>
+                  <td><%= funcionario.data_admissao %></td>
+                  <td><%= funcionario.email %></td>
+                </tr>
+              <%end%>
+          </tbody>
+        </table>
+      </div>
+    <%end%>
+    <%if @plano.nome == 'Mente Sã, Corpo São'%>
+      <div class= "d-flex p-5 text-center">
+        <table class="table">
+          <thead class="thead">
+            <tr>
+              <th scope="col">CPF</th>
+              <th scope="col">Horas meditadas nos últimos 7 dias</th>
+            </tr>
+          </thead>
+          <tbody>
+              <% @funcionarios.each do |funcionario| %>
+                <tr>
+                  <td><%=  funcionario.cpf %></td>
+                  <td><%= funcionario.horas_meditadas %></td>
+                </tr>
+              <%end%>
+          </tbody>
+        </table>
+      </div>
+    <%end%>
     <div class="d-flex justify-content-center pt-5">
       <%= link_to 'Back', planos_path, class: 'btn btn-home ml-3' %>
-      <%= link_to 'Add', new_plano_funcionario_path(@plano), class: 'btn btn-home ml-3' %>
     </div>
 </div>

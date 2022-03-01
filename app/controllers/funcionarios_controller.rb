@@ -46,23 +46,6 @@ class FuncionariosController < ApplicationController
   end
 
   def funcionario_params
-    params.require(:funcionario).permit(:name, :cpf, :email)
+    params.require(:funcionario).permit(:name, :cpf, :email, :data_admissao, :horas_meditadas, :endereco, :peso, :altura)
   end
-
-  # def norteeuropa_params
-  #   params.require(:funcionario).permit(:name, :cpf, :data_admissao, :email)
-  # end
-
-  # def pampulhaintermedica_params
-  #   params.require(:funcionario).permit(:name, :cpf, :data_admissao, :endereco)
-  # end
-
-  # def dentalsorriso_params
-  #   params.require(:funcionario).permit(:name, :cpf, :peso, :altura)
-  # end
-
-  # def saudemental_params
-  #   params.require(:funcionario).permit(:cpf, :horas_meditadas)
-  # end
-
 end
