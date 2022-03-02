@@ -16,7 +16,7 @@ Comunicação e colaboração para criação do app;<br />
 - Yarn<br />
 - Bundle<br />
 
-###Obs:
+### Obs:
 - Ao acessar o app, rodar o seed e fazer o login com os possíveis usuários criados;
 
  
