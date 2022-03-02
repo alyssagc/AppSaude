@@ -2,14 +2,14 @@
     <div class='text-center py-5'>
       <h1>Bem-vindo(a) ao portal da Pipo Saúde!</h1>
     </div>
-    <div class="card p-5">
+    <div class="card p-4">
       <div class='row'>
         <div class='pl-5 text-center'>
           <h3>Faça seu cadastro para ter acesso a nossa plataforma!</h3>
         </div>
       </div>
       <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-        <%= f.error_notification %>
+        <p class='text-danger'><%= resource.errors.full_messages.to_sentence %></p>
           <div class='row mt-3 justify-content-center'>
             <div class="text-left">
               <%= f.label :nickname, 'Nome da empresa' %>

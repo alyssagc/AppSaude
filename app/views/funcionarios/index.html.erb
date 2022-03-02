@@ -12,21 +12,21 @@
           <th scope="col">Empresa</th>
         </tr>
       </thead>
-      <tbody>
+      <tbody >
           <% @funcionarios.each do |funcionario| %>
             <tr>
               <th scope="row"><%= funcionario.id%></th>
-              <td><%= funcionario.name %></td>
+              <td><%= funcionario.name.capitalize %></td>
               <td><%= funcionario.cpf %></td>
               <td>
                 <% funcionario.planos.each do |plano|%>
-                  <p><%= plano.nome %></p>
+                  <p><%= plano.nome.capitalize %></p>
                 <%end%>
               </td>
-              <td><%= funcionario.user.nickname %></td>
+              <td><%= funcionario.user.nickname.capitalize %></td>
               <td>
-                <%= link_to 'Edit', edit_funcionario_path(funcionario) , class: 'btn btn-home' %>
-                <%= link_to 'Delete', funcionario_path(funcionario), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger mx-3"%>
+                <%= link_to '', edit_funcionario_path(funcionario) , class: 'far fa-edit text-info' %>
+                <%= link_to '', funcionario_path(funcionario), method: :delete, data: { confirm: 'Are you sure?' }, class: "fas fa-trash-alt text-danger" %>
               </td>
             </tr>
           <%end%>

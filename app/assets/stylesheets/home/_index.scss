@@ -2,10 +2,15 @@
 
 .container-home{
   align-items: center;
-  height: 100vh;
   background-color: #ffd9e9;
   font-family: 'Poppins', sans-serif;
   color: #1139b0;
+  width: 100%;
+  height: 100%;
+  padding-bottom:40%;
+  margin: 0 auto;
+  overflow-y: auto;
+  box-sizing: border-box;
 }
 
 .card{

@@ -10,22 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_01_150547) do
-
-  create_table "adesao_planos", force: :cascade do |t|
-    t.date "data_admissao"
-    t.integer "horas_meditadas"
-    t.text "endereco"
-    t.decimal "peso"
-    t.decimal "altura"
-    t.string "email"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.integer "funcionarios_id"
-    t.integer "planos_id"
-    t.index ["funcionarios_id"], name: "index_adesao_planos_on_funcionarios_id"
-    t.index ["planos_id"], name: "index_adesao_planos_on_planos_id"
-  end
+ActiveRecord::Schema.define(version: 2022_03_02_022418) do
 
   create_table "funcionarios", force: :cascade do |t|
     t.string "name"
@@ -34,40 +19,20 @@ ActiveRecord::Schema.define(version: 2022_03_01_150547) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "user_id"
-    t.integer "adesao_planos_id"
     t.decimal "peso"
     t.decimal "altura"
     t.text "endereco"
     t.integer "horas_meditadas"
     t.date "data_admissao"
-    t.index ["adesao_planos_id"], name: "index_funcionarios_on_adesao_planos_id"
     t.index ["user_id"], name: "index_funcionarios_on_user_id"
   end
 
-  create_table "funcionarios_planos", id: false, force: :cascade do |t|
-    t.integer "funcionario_id", null: false
-    t.integer "plano_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index "\"planos_id\"", name: "index_funcionarios_planos_on_planos_id"
-    t.index ["funcionario_id"], name: "index_funcionarios_planos_on_funcionario_id"
-  end
-
   create_table "planos", force: :cascade do |t|
-    t.string "nome" 
+    t.string "nome"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "user_id"
     t.index ["user_id"], name: "index_planos_on_user_id"
-  end
-
-  create_table "planos_empresas", force: :cascade do |t|
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.integer "planos_id"
-    t.integer "user_id"
-    t.index ["planos_id"], name: "index_planos_empresas_on_planos_id"
-    t.index ["user_id"], name: "index_planos_empresas_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -83,11 +48,6 @@ ActiveRecord::Schema.define(version: 2022_03_01_150547) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "adesao_planos", "funcionarios", column: "funcionarios_id"
-  add_foreign_key "adesao_planos", "planos", column: "planos_id"
-  add_foreign_key "funcionarios", "adesao_planos", column: "adesao_planos_id"
   add_foreign_key "funcionarios", "users"
   add_foreign_key "planos", "users"
-  add_foreign_key "planos_empresas", "planos", column: "planos_id"
-  add_foreign_key "planos_empresas", "users"
 end
