@@ -1,24 +1,19 @@
-# README
+## PipoSaúde Challenge
+Desafio técnico para empresa PipoSaúde <br />
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Inicio
+O objetivo principal do exercício é avaliar como atacar o problema;<br />
+Verificar a organização do raciocínio e o código;<br />
+Conhecimentos de desenvolvimento de Software;<br />
+Comunicação e colaboração para criação do app;<br />
 
-Things you may want to cover:
+### Requisitos
+- Ruby 3.0.3<br />
+- Rails 6.1.4<br />
+- SQLite3<br />
+- Yarn<br />
+- Bundle<br />
+- Simple_form <br />
+- Bootstrap 4.6 <br />
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+ 
