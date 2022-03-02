@@ -3,39 +3,33 @@
     <%= f.error_notification %>
     <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
       <div class='row mt-2 justify-content-center'>
-        <div class="text-left">
-          <%= f.label :name %>
-          <%= f.email_field :name, autofocus: true, autocomplete: 'nome', class: 'form-control' %>
+        <div class="text-left mr-5">
+          <%= f.label :name, 'Nome' %>
+          <%= f.text_field :name, autofocus: true, autocomplete: 'nome', class: 'form-control' %>
+        </div>
+        <div class="text-left ml-5">
+          <%= f.label :cpf, 'CPF' %>
+          <%= f.number_field :cpf, autofocus: true, autocomplete: 'cpf', class: 'form-control' %>
         </div>
       </div>
-      <div class='row mt-2 justify-content-center'>
-        <div class="text-left">
-          <%= f.label :cpf %>
-          <%= f.email_field :cpf, autofocus: true, autocomplete: 'cpf', class: 'form-control' %>
-        </div>
-      </div>
-      <div class='row mt-2 justify-content-center'>
-        <div class="text-left">
-          <%= f.label :data_admissao %>
-          <%= f.email_field :data_admissao, autofocus: true, autocomplete: 'email', class: 'form-control' %>
-        </div>
-      </div>
-      <div class='row mt-2 justify-content-center'>
-        <div class="text-left">
+      <div class='row mt-5 justify-content-center'>
+        <div class="text-left mr-5">
           <%= f.label :email %>
           <%= f.email_field :email, autofocus: true, autocomplete: 'email', class: 'form-control' %>
         </div>
-      </div>
-      <div class='row mt-2 justify-content-center'>
-        <div class="text-left">
-          <%= f.label :peso %>
-          <%= f.email_field :peso, autofocus: true, autocomplete: 'email', class: 'form-control' %>
+        <div class="text-left ml-5">
+          <%= f.label :data_admissao, 'Data de Admissão' %>
+          <%= f.date_field :data_admissao, autofocus: true, autocomplete: 'email', class: 'form-control' %>
         </div>
       </div>
-      <div class='row mt-2 justify-content-center'>
-        <div class="text-left">
-          <%= f.label :altura %>
-          <%= f.email_field :altura, autofocus: true, autocomplete: 'email', class: 'form-control' %>
+      <div class='row mt-5 justify-content-center'>
+        <div class="text-left mr-5">
+          <%= f.label :peso, 'Peso (Kg)' %>
+          <%= f.number_field :peso, autofocus: true, autocomplete: 'email', class: 'form-control' %>
+        </div>
+        <div class="text-left ml-5">
+          <%= f.label :altura, 'Altura (cm)' %>
+          <%= f.number_field :altura, autofocus: true, autocomplete: 'email', class: 'form-control' %>
         </div>
       </div>
       <div class='row mt-2 justify-content-center'>
@@ -45,7 +39,7 @@
       </div>
       <div class='d-flex justify-content-center mt-5' >
         <%= link_to "Back", funcionarios_path, class: "btn btn-home" %>
-        <%= f.submit "Cadastrar", class: "btn btn-home mx-3" %>
+        <%= f.submit "Cadastrar", class: "btn btn-home mx-4" %>
       </div>
   <% end %>
 </div>
