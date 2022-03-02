@@ -11,9 +11,12 @@ Comunicação e colaboração para criação do app;<br />
 - Ruby 3.0.3<br />
 - Rails 6.1.4<br />
 - SQLite3<br />
-- Yarn<br />
-- Bundle<br />
 - Simple_form <br />
 - Bootstrap 4.6 <br />
+- Yarn<br />
+- Bundle<br />
+
+###Obs:
+- Ao acessar o app, rodar o seed e fazer o login com os possíveis usuários criados;
 
  
