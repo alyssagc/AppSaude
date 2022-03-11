@@ -16,7 +16,7 @@ Comunicação e colaboração para criação do app;<br />
 
 ### Descrição
 A aplicação consiste em ajudar funcionários do RH de uma empresa adicionar novos membros na mesma, incluindo todos eles nos benefícios que a empresa oferece.<br />
-Foi levado em consideração que cada benefício requer dados cadastrais distintos.v
+Foi levado em consideração que cada benefício requer dados cadastrais distintos.<br />
 
 Para solução foi criado três Tables, sendo elas:<br />
 - Funcionários<br />
@@ -64,4 +64,3 @@ Tio Patinhas Bank - Usuário: tiopatinhasbank@hotmail.com<br />
            Senha: 123456<br />
 
 ---
-

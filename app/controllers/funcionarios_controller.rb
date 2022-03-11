@@ -7,8 +7,7 @@ class FuncionariosController < ApplicationController
     @planos = Plano.where(user: current_user)
   end
 
-  def show
-  end
+  def show;end
 
   def new
     @funcionario = Funcionario.new
@@ -36,7 +35,7 @@ class FuncionariosController < ApplicationController
 
   def destroy
     @funcionario.destroy
-    redirect_to root_path
+    redirect_to funcionarios_path
   end
 
   private
