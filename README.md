@@ -7,8 +7,6 @@ Verificar a organização do raciocínio e o código;<br />
 Conhecimentos de desenvolvimento de Software;<br />
 Comunicação e colaboração para criação do app;<br />
 
-* [Sobre](#Sobre)
-* 
 ### Requisitos
 - Ruby 3.0.3<br />
 - Rails 6.1.4<br />
