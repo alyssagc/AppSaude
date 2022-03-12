@@ -1,20 +1,20 @@
-## PipoSaúde Challenge
+## *PipoSaúde Challenge*
 Desafio técnico para empresa PipoSaúde <br />
 
-### Tabela de conteúdo
+### *Tabela de conteúdo*
 * [Sobre](#Sobre)
 * [Descrição](#Descrição)
 * [Features](#Features)
 * [Pré-Requisitos](#Pré-Requisitos)
 * [IniciandoApp](#IniciandoApp)
 
-### Sobre
+### *Sobre*
 O objetivo principal do exercício é avaliar como atacar o problema;<br />
 Verificar a organização do raciocínio e o código;<br />
 Conhecimentos de desenvolvimento de Software;<br />
 Comunicação e colaboração para criação do app;<br />
 
-### Descrição
+### *Descrição*
 A aplicação consiste em ajudar funcionários do RH de uma empresa adicionar novos membros na mesma, incluindo todos eles nos benefícios que a empresa oferece.<br />
 Foi levado em consideração que cada benefício requer dados cadastrais distintos.<br />
 
@@ -33,15 +33,15 @@ Ao adicionar um novo membro, todos os dados necessários deverão ser preenchido
 
 Abaixo, segue um curto vídeo de demonstração do app.<br />
 
-### Features
+### *Features*
 <h1 align = "center" >
   <img alt="Readme" title= "Readme" src= "PipoApp.gif">
 </h1>
 
-### Pré-Requisitos
+### *Pré-Requisitos*
 Antes de iniciar, é necessário ter instalado na máquina as seguintes ferramentas: [Git](https://git-scm.com), [Ruby 3.0.3](https://www.ruby-lang.org/pt/downloads/), para o banco de dados foi utilizado o [SQLite3](https://www.sqlite.org/about.html). Além disso, é aconselhavel ter um editor para trabalhar com o código, como o [VSCode](https://code.visualstudio.com/).
 
-### IniciandoApp
+### *IniciandoApp*
 ```bash
 #Clone este repositório
 $ git clone <https://github.com/alyssagc/PipoChallenge.git>
@@ -58,9 +58,10 @@ $ rails db:reset
 
 #Acesse o app no <http://localhost:3000/>
 ```
-### OBS
+### *OBS*
 
 Possíveis usuários para testar o app:<br />
+
 Acme Co. - Usuário: acme@hotmail.com<br />
            Senha: 123456<br />
            
