@@ -35,7 +35,7 @@ Abaixo, segue um curto vídeo de demonstração do app.<br />
 
 ### *Features*
 <h1 align = "center" >
-  <img alt="Readme" title= "Readme" src= "PipoApp.gif">
+  <img alt="Readme" title= "Readme" src= "AppPipo.gif">
 </h1>
 
 ### *Pré-Requisitos*
@@ -64,7 +64,7 @@ Possíveis usuários para testar o app:<br />
 
 Acme Co. - Usuário: acme@hotmail.com<br />
            Senha: 123456<br />
-           
+
 Tio Patinhas Bank - Usuário: tiopatinhasbank@hotmail.com<br />
            Senha: 123456<br />
 
