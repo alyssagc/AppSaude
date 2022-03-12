@@ -6,7 +6,7 @@ Desafio técnico para empresa PipoSaúde <br />
 * [Descrição](#Descrição)
 * [Features](#Features)
 * [Pré-Requisitos](#Pré-Requisitos)
-* [App](#Rodando o App)
+* [IniciandoApp](#IniciandoApp)
 
 ### Sobre
 O objetivo principal do exercício é avaliar como atacar o problema;<br />
@@ -25,7 +25,9 @@ Para solução foi criado três Tables, sendo elas:<br />
 
 Ao acessar o app, o login é feito com email e senha da empresa que contratou nosso serviço;<br />
 Ao entrar na plataforma, o usuário poderá seguir por dois caminhos:<br />
-1- Visitar a página funcionários onde é possível ver todos os funcionários presentes na empresa com seus dados básicos (nome, CPF, benefícios), editar dados cadastrais de um funcionário, realizar o desligamento e também adicionar um novo membro. Ao adicionar um novo membro, todos os dados necessários deverão ser preenchidos, levando em consideração os benefícios que aquela empresa possui e dados que ela pede.<br />
+
+1- Visitar a página funcionários onde é possível ver todos os funcionários presentes na empresa com seus dados básicos (nome, CPF, benefícios), editar os dados de um funcionário, realizar o desligamento e também adicionar um novo membro.<br />
+Ao adicionar um novo membro, todos os dados necessários deverão ser preenchidos, levando em consideração os benefícios que aquela empresa possui e dados que ela pede.<br />
 
 2- Visitar todos os benefícios oferecidos pela empresa, e mais detalhadamente, ao clicar em cada um é possível ver todos os funcionários ativos nele e seus dados de acordo com o que cada benefício pede na ficha cadastral.<br />
 
@@ -39,7 +41,7 @@ Abaixo, segue um curto vídeo de demonstração do app.<br />
 ### Pré-Requisitos
 Antes de iniciar, é necessário ter instalado na máquina as seguintes ferramentas: [Git](https://git-scm.com), [Ruby 3.0.3](https://www.ruby-lang.org/pt/downloads/), para o banco de dados foi utilizado o [SQLite3](https://www.sqlite.org/about.html). Além disso, é aconselhavel ter um editor para trabalhar com o código, como o [VSCode](https://code.visualstudio.com/).
 
-### Rodando o App
+### IniciandoApp
 ```bash
 #Clone este repositório
 $ git clone <https://github.com/alyssagc/PipoChallenge.git>
@@ -57,9 +59,11 @@ $ rails db:reset
 #Acesse o app no <http://localhost:3000/>
 ```
 ### OBS
-Possíveis usuários para testar:<br />
+
+Possíveis usuários para testar o app:<br />
 Acme Co. - Usuário: acme@hotmail.com<br />
            Senha: 123456<br />
+           
 Tio Patinhas Bank - Usuário: tiopatinhasbank@hotmail.com<br />
            Senha: 123456<br />
 
