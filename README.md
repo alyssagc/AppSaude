@@ -50,11 +50,14 @@ $ git clone <https://github.com/alyssagc/PipoChallenge.git>
 $ cd PipoChallenge
 
 #Instale as dependências
-$ yarn
-$ bundle
+$ yarn install
+$ bundle install
 
 #Rode o seed
 $ rails db:reset
+
+#Iniciar o servidor
+$ rails s
 
 #Acesse o app no <http://localhost:3000/>
 ```
