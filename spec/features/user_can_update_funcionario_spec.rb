@@ -15,7 +15,6 @@ feature 'Atualizar dados de um funcionário' do
     funcionario.reload
 
     expect(funcionario.name).to eq 'Maria Silva'
-
   end
 
     scenario 'CPF' do
@@ -32,7 +31,6 @@ feature 'Atualizar dados de um funcionário' do
     funcionario.reload
 
     expect(funcionario.cpf).to eq 987654321
-
   end
 
   scenario 'Email' do
@@ -145,5 +143,4 @@ feature 'Atualizar dados de um funcionário' do
 
     expect(page).to have_content('Please review the problems below:')
   end
-
 end

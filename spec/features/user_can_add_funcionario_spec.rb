@@ -22,7 +22,6 @@ feature 'Contratar um novo funcionário' do
     click_on 'Cadastrar'
 
     expect(page).to have_content('Maria')
-
   end
 
   scenario 'Deve estar logado na plataforma' do

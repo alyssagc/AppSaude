@@ -11,7 +11,6 @@ feature 'Visitante acessa home' do
     visit root_path
     user = FactoryBot.create(:user)
 
-
     click_on 'submit'
     within('form#new_user') do
       fill_in 'Email', with: user.email
@@ -58,5 +57,4 @@ feature 'Visitante acessa home' do
     expect(current_path).to eq new_user_session_path
     expect(page).to have_content('Login')
   end
-
 end

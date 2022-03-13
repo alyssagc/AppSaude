@@ -13,16 +13,6 @@
         </div>
       </div>
       <div class='row mt-5 justify-content-center'>
-        <div class="text-left mr-2">
-          <%= f.label :cpf, 'CPF' %>
-          <%= f.number_field :cpf, class: 'form-control' %>
-        </div>
-        <div class="text-left ml-5">
-          <%= f.label :horas_meditadas, 'Horas Meditadas (Últimos 7 dias)' %>
-          <%= f.number_field :horas_meditadas, class: 'form-control' %>
-        </div>
-      </div>
-      <div class='row mt-5 justify-content-center'>
         <div class="text-left mr-5">
           <%= f.label :peso, 'Peso (Kg)' %>
           <%= f.number_field :peso, class: 'form-control' %>
@@ -32,6 +22,17 @@
           <%= f.number_field :altura, class: 'form-control' %>
         </div>
       </div>
+      <div class='row mt-5 justify-content-center'>
+        <div class="text-left">
+          <%= f.label :cpf, 'CPF' %>
+          <%= f.number_field :cpf, class: 'form-control' %>
+        </div>
+        <div class="text-left ml-5">
+          <%= f.label :horas_meditadas, 'Horas Meditadas (Últimos 7 dias)' %>
+          <%= f.number_field :horas_meditadas, class: 'form-control' %>
+        </div>
+      </div>
+
       <div class='mt-5 '>
         <div class="text-left">
           <%= f.label :endereco, 'Endereço' %>
