@@ -29,15 +29,15 @@
               <%= f.password_field :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length), input_html: { autocomplete: "new-password" }, class: 'form-control' %>
             </div>
             <div class="form-group text-left mt-3">
-              <%= f.label :password, 'Confirme sua Senha' %>
-              <%= f.password_field :password_confirmation, required: true, input_html: { autocomplete: "new-password" }, class: 'form-control' %>
+              <%= f.label :password_confirmation, 'Confirme sua Senha' %>
+              <%= f.password_field :password_confirmation, required: true, autocomplete: 'current-password', class: 'form-control' %>
             </div>
           </div>
 
           <div class='row mt-4'>
             <p class='col-4'></p>
             <div class="form-group col-4">
-              <%= f.button :submit, 'Sign up', class: 'form-control btn-home' %>
+              <%= f.button :submit, 'Criar', class: 'form-control btn-home' %>
             </div>
           </div>
       <% end %>

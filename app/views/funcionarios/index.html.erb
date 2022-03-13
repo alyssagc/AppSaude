@@ -25,8 +25,12 @@
               </td>
               <td><%= funcionario.user.nickname.capitalize %></td>
               <td>
-                <%= link_to '', edit_funcionario_path(funcionario) , class: 'far fa-edit text-info' %>
-                <%= link_to '', funcionario_path(funcionario), method: :delete, data: { confirm: 'Are you sure?' }, class: "fas fa-trash-alt text-danger" %>
+                <%= link_to edit_funcionario_path(funcionario), class: "edit_link" do %>
+                  <i class="far fa-edit text-info"></i>
+                <% end %>
+                <%= link_to  funcionario_path(funcionario), method: :delete, data: { confirm: 'Are you sure?' }, class: "delete_link" do %>
+                  <i class="fas fa-trash-alt text-danger"></i>
+                <% end %>
               </td>
             </tr>
           <%end%>
