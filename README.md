@@ -8,6 +8,7 @@ Desafio técnico para empresa PipoSaúde <br />
 * [Pré-Requisitos](#Pré-Requisitos)
 * [IniciandoApp](#IniciandoApp)
 * [Testes](#Testes)
+* [Arquitetura](#Arquitetura)
 
 ### *Sobre*
 O objetivo principal do exercício é avaliar como atacar o problema;<br />
@@ -26,7 +27,7 @@ Para solução foi criado três Tables, sendo elas:<br />
 
 <div align = "center" >
   <img width="600" alt="PipoDiagrama" src="https://user-images.githubusercontent.com/82421103/158085307-9c9bf149-7c79-471a-bbf0-8beb404bc2bd.png">
-</div><br />Pipo
+</div><br />
 
 Ao acessar o app, o login é feito com email e senha da empresa que contratou nosso serviço;<br />
 Ao entrar na plataforma, o usuário poderá seguir por dois caminhos:<br />
@@ -90,4 +91,17 @@ $ rails generate rspec:install
 #Checar os Testes 
 $ rails rspec
 ```
+
+### *Arquitetura*
+
+Ao acessar o VSCode, você vai encontrar um projeto seguindo a estrutura MVC (Model View Controller), com intuito de deixar o código mais organizado e legível.<br />
+
+No app/models você vai encontrar os três modelos utilizados no projeto (User, Funcionario e Plano) com suas respectivas associações e validações.<br />
+
+No app/controllers, você encontra três controllers, sendo eles Funcionários, Home e Planos, necessários para intermediar as requisições enviadas pela View com as respostas fornecidas pelo Model.<br />
+
+No app/views você encontra todas as views organizadas em pastas, que o usuário tem ao accessar o aplicativo, é a partir das interações do usuário que o controller pega essas informações e passa para o respectivo Model, este avalia a informação e transmite uma resposta.<br />
+
+Além desses, você pode acessar config/routes para verificar as rotas criadas no projeto e spec/features onde se encontra todos os testes criados para aplicação.
+
 ---
