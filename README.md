@@ -96,12 +96,16 @@ $ rails rspec
 
 Ao acessar o VSCode, você vai encontrar um projeto seguindo a estrutura MVC (Model View Controller), com intuito de deixar o código mais organizado e legível.<br />
 
-No app/models você vai encontrar os três modelos utilizados no projeto (User, Funcionario e Plano) com suas respectivas associações e validações.<br />
+No app/models temos os três modelos utilizados no projeto (User, Funcionario e Plano) com suas respectivas associações e validações.<br />
 
 No app/controllers, você encontra três controllers, sendo eles Funcionários, Home e Planos, necessários para intermediar as requisições enviadas pela View com as respostas fornecidas pelo Model.<br />
 
 No app/views você encontra todas as views organizadas em pastas, que o usuário tem ao accessar o aplicativo, é a partir das interações do usuário que o controller pega essas informações e passa para o respectivo Model, este avalia a informação e transmite uma resposta.<br />
 
-Além desses, você pode acessar config/routes para verificar as rotas criadas no projeto e spec/features onde se encontra todos os testes criados para aplicação.
+Além desses, você pode acessar config/routes para verificar as possíveis rotas de acesso no servidor e spec/features onde se encontra todos os testes criados.
 
+Abaixo uma imagem representativa do MVC:<br />
+<div align = "center" >
+<img width="500" alt="MVC" src="https://user-images.githubusercontent.com/82421103/158088848-af364ae5-45ef-4a8d-b586-c17fa9e979f8.png">
+</div><br />
 ---
