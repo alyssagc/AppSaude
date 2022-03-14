@@ -42,7 +42,7 @@ Ao adicionar um novo membro, todos os dados necessários deverão ser preenchido
 Abaixo, segue um curto vídeo de demonstração do app.<br />
 
 <h1 align = "center" >
-  <img alt="Readme" title= "Readme" src= "AppPipo.gif">
+  <img alt="Readme" title= "Readme" src= "PipoSaúdeApp.gif">
 </h1>
 
 ### *Pré-Requisitos*
@@ -77,10 +77,10 @@ Acme Co. - Usuário: acme@hotmail.com<br />
 
 Tio Patinhas Bank - Usuário: tiopatinhasbank@hotmail.com<br />
            Senha: 123456<br />
-           
+
 ### *Testes*
 
-Para os testes foi utilizado o framework Rspec, junto com a library Capybara. Para instalar basta seguir os seguintes comandos no terminal:  
+Para os testes foi utilizado o framework Rspec, junto com a library Capybara. Para instalar basta seguir os seguintes comandos no terminal:
 
 ```
 #Adicionar o RSpec ao seu projeto (Será necessário executar apenas se não foi dado um 'bundle install' anteriormente
@@ -89,7 +89,7 @@ $ bundle install
 #Instalando o RSpec
 $ rails generate rspec:install
 
-#Checar os Testes 
+#Checar os Testes
 $ rails rspec
 ```
 
