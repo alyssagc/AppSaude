@@ -24,6 +24,10 @@ Para solução foi criado três Tables, sendo elas:<br />
 - Planos<br />
 - Users ( que neste caso, um usuário seria uma empresa, cliente da PipoSaúde)<br />
 
+<h1 align = "center" >
+  <img alt="Readme" src= "assets/images/DiagramaPipo.png">
+</h1>
+
 Ao acessar o app, o login é feito com email e senha da empresa que contratou nosso serviço;<br />
 Ao entrar na plataforma, o usuário poderá seguir por dois caminhos:<br />
 
