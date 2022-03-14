@@ -9,6 +9,7 @@ Desafio técnico para empresa PipoSaúde <br />
 * [IniciandoApp](#IniciandoApp)
 * [Testes](#Testes)
 * [Arquitetura](#Arquitetura)
+* [Projeto Futuro](#ProjetoFuturo)
 
 ### *Sobre*
 O objetivo principal do exercício é avaliar como atacar o problema;<br />
@@ -108,4 +109,9 @@ Abaixo uma imagem representativa do MVC:<br />
 <div align = "center" >
 <img width="500" alt="MVC" src="https://user-images.githubusercontent.com/82421103/158088848-af364ae5-45ef-4a8d-b586-c17fa9e979f8.png">
 </div><br />
+
+### *Projeto Futuro*
+
+Ao acessar a página de benefícios, existe um botão 'adicionar um novo benefício' que não foi implementado a tempo da entrega. A ideia é desenvolver toda essa parte da relação Plano X Empresa, para que futuramente as empresas possam adicionar ou remover parceiros, assim podendo oferecer seus funcionários os planos com as melhores ofertas.<br />
+
 ---
