@@ -24,9 +24,9 @@ Para solução foi criado três Tables, sendo elas:<br />
 - Planos<br />
 - Users ( que neste caso, um usuário seria uma empresa, cliente da PipoSaúde)<br />
 
-<h1 align = "center" >
-  <img alt="Readme" src= "assets/images/DiagramaPipo.png">
-</h1>
+<div align = "center" >
+  <img width="600" alt="PipoDiagrama" src="https://user-images.githubusercontent.com/82421103/158085307-9c9bf149-7c79-471a-bbf0-8beb404bc2bd.png">
+</div><br />Pipo
 
 Ao acessar o app, o login é feito com email e senha da empresa que contratou nosso serviço;<br />
 Ao entrar na plataforma, o usuário poderá seguir por dois caminhos:<br />
