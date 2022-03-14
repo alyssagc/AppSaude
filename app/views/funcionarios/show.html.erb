@@ -1,11 +1,15 @@
 <div class= "container-home" align="center">
     <div class='text-center py-5'>
-        <h1>Informações adicionais:</h1>
+        <h1>Ficha Completa:</h1>
     </div>
     <div class="card-funcionarios p-5">
-      <h2 class= "text-center text-func font-weight-bold"><%=@funcionario.name%></h2>
+      <h2 class= "text-center text-func font-weight-bold">Informações de <%=@funcionario.name%></h2>
       <div class='row'>
         <div class='pl-5 text-left'>
+          <div class='d-flex mt-5'>
+            <h5>Nome:  </h5>
+            <h5 class= "ml-2 text-func"><%=@funcionario.name.capitalize %></h5>
+          </div>
           <div class='d-flex mt-3'>
             <h5>CPF:  </h5>
             <h5 class= "ml-2 text-func"><%=@funcionario.cpf %></h5>
@@ -15,22 +19,33 @@
             <h5 class= "ml-2 text-func"><%=@funcionario.email %></h5>
           </div>
           <div class='d-flex mt-3'>
-            <h5>Empresa:</h5>
-            <h5 class= "ml-2 text-func"><%=@funcionario.user.nickname %></h5>
+            <h5>Peso:</h5>
+            <h5 class= "ml-2 text-func"><%=@funcionario.peso %>Kg</h5>
           </div>
           <div class='d-flex mt-3'>
-            <h5>Benefícios Utilizados:</h5>
-            <h5 class= "ml-2 text-func">
-
-
-            </h5>
+            <h5>Altura:</h5>
+            <h5 class= "ml-2 text-func"><%=@funcionario.altura%>cm</h5>
+          </div>
+          <div class='d-flex mt-3'>
+            <h5>Horas meditadas (Últimos 7 dias):</h5>
+            <h5 class= "ml-2 text-func"><%=@funcionario.horas_meditadas %></h5>
+          </div>
+          <div class='d-flex mt-3'>
+            <h5>Endereço:</h5>
+            <h5 class= "ml-2 text-func"><%=@funcionario.endereco.capitalize %></h5>
+          </div>
+          <div class='d-flex mt-3'>
+            <h5>Data de Admissão:</h5>
+            <h5 class= "ml-2 text-func"><%=@funcionario.data_admissao %></h5>
+          </div>
+          <div class='d-flex mt-3'>
+            <h5>Empresa:</h5>
+            <h5 class= "ml-2 text-func"><%=@funcionario.user.nickname %></h5>
           </div>
         </div>
       </div>
       <div class="d-flex justify-content-center pt-5">
-        <%= link_to 'Edit', edit_funcionario_path , class: 'btn btn-home' %>
         <%= link_to 'Back', funcionarios_path, class: 'btn btn-home ml-3' %>
-        <%= link_to 'Delete', @plano, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger mx-3" %></p>
       </div>
       <div class="pt-5">
         <h5 id="text-data">Criado em  <%= time_tag(@funcionario.created_at) %></h5>
