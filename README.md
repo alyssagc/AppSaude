@@ -1,4 +1,4 @@
-## *PipoSaúde Challenge*
+## *AppSaúde Challenge*
 Desafio técnico <br />
 
 ### *Tabela de conteúdo*
