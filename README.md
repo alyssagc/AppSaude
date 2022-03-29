@@ -1,5 +1,5 @@
 ## *PipoSaúde Challenge*
-Desafio técnico para empresa PipoSaúde <br />
+Desafio técnico <br />
 
 ### *Tabela de conteúdo*
 * [Sobre](#Sobre)
