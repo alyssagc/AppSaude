@@ -1,5 +1,5 @@
-## *PipoSaúde Challenge*
-Desafio técnico para empresa PipoSaúde <br />
+## *AppSaúde Challenge*
+Desafio técnico <br />
 
 ### *Tabela de conteúdo*
 * [Sobre](#Sobre)
@@ -83,7 +83,8 @@ Tio Patinhas Bank - Usuário: tiopatinhasbank@hotmail.com<br />
 Para os testes foi utilizado o framework Rspec, junto com a library Capybara. Para instalar basta seguir os seguintes comandos no terminal:
 
 ```
-#Adicionar o RSpec ao seu projeto (Será necessário executar apenas se não foi dado um 'bundle install' anteriormente
+#Adicionar o RSpec ao seu projeto (Será necessário executar apenas se não foi dado
+um 'bundle install' anteriormente
 $ bundle install
 
 #Instalando o RSpec
