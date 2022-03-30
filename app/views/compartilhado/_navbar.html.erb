@@ -1,9 +1,9 @@
 <nav class="navbar bg-light">
+    <%= link_to root_path, class: "navbar-brand" do %>
       <div>
-        <%= link_to root_path, class: "navbar-brand d-flex" do %>
-          <%= image_tag "https://global-uploads.webflow.com/5ee0d13e1d0466f2353dcb99/604b853988008d3835ce3dc5_Logo%20%E2%80%93%20Pipo%20Sau%CC%81de.svg"%>
-        <% end %>
+        <h2><i class="fas fa-heartbeat"></i>AppSaúde</h2>
       </div>
+    <% end %>
 
       <div class="nav-link text-reset">
         <% if user_signed_in? %>
